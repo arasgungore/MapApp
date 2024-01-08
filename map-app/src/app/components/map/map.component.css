@@ -1,0 +1,79 @@
+/* Map Container */
+#map {
+  height: 100vh;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Control Buttons */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4285f4;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #2c70ff;
+  transform: scale(1.05);
+}
+
+/* Additional Styling for Buttons */
+button:active {
+  transform: scale(0.95);
+}
+
+/* Additional Styling for Map Container */
+#map-container {
+  position: relative;
+}
+
+/* Info Box */
+.info-box {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.info-box h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Overlay for Routing Instructions */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: #fff;
+}
+
+/* Routing Instructions */
+.routing-instructions {
+  max-width: 80%;
+  padding: 20px;
+  background: #4285f4;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Add more styles as needed for other elements and features */
