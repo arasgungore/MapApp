@@ -90,3 +90,12 @@ Contributions are welcome! Please follow the [Contributing Guidelines](CONTRIBUT
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+
+
+## Author
+
+👤 **Aras Güngöre**
+
+* LinkedIn: [@arasgungore](https://www.linkedin.com/in/arasgungore)
+* GitHub: [@arasgungore](https://github.com/arasgungore)
