@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 declare var google: any;
 
@@ -9,10 +10,12 @@ export class GoogleMapsService {
   private map: any;
   private directionsService: any;
   private directionsRenderer: any;
+  private timezoneService: any;
 
   constructor() {
     this.directionsService = new google.maps.DirectionsService();
     this.directionsRenderer = new google.maps.DirectionsRenderer();
+    this.timezoneService = new google.maps.TimeZoneService();
   }
 
   initMap(): void {
@@ -37,12 +40,31 @@ export class GoogleMapsService {
           map: this.map,
           title: 'Your Location'
         });
+
+        this.showDateAndTime(pos);
       }, () => {
         // Handle location error
       });
     } else {
       // Browser doesn't support Geolocation
     }
+  }
+
+  showDateAndTime(position: any): void {
+    this.timezoneService.getTimeZone(
+      { location: position, timestamp: new Date().getTime() / 1000 },
+      (result: any, status: any) => {
+        if (status === 'OK') {
+          const date = new Date(result.rawOffset * 1000 + result.dstOffset * 1000);
+          const timeZone = result.timeZoneName;
+
+          console.log(`Current Date and Time: ${date.toLocaleString()} (${timeZone})`);
+          // Update your UI with the date and timezone information
+        } else {
+          // Handle timezone error
+        }
+      }
+    );
   }
 
   zoomIn(): void {
