@@ -7,8 +7,6 @@ This project is a GPS app built with Angular.js and integrated with the Google M
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Features](#features)
@@ -18,18 +16,6 @@ This project is a GPS app built with Angular.js and integrated with the Google M
 
 
 ## Getting Started
-
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/)
-- [Angular CLI](https://angular.io/cli)
-
-
-### Installation
 
 1. Install dependencies:
 
@@ -52,7 +38,7 @@ Make sure you have the following installed:
 ## Project Structure
 
 ```plaintext
-gps-app/
+map-app/
 |-- src/
 |   |-- app/
 |       |-- components/
